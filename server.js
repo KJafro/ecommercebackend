@@ -4,8 +4,9 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const User = require('./models/userModel')
 const cors = require("cors");
-app.use(cors());
-app.options("*", cors());
+// app.use(cors());
+// app.options("*", cors());
+app.use(cors({ origin: "*" }));
 const cookieParser = require('cookie-parser')
 
 app.use(express.json())
