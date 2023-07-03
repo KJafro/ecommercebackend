@@ -6,13 +6,13 @@ const User = require('./models/userModel')
 const cors = require("cors");
 // app.use(cors());
 // app.options("*", cors());
-app.use(cors({ origin: "*" }));
 const cookieParser = require('cookie-parser')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(cookieParser())
 
+app.use(cors({ origin: "*" }));
 const userRoute = require('./routes/User')
 const itemRoute = require('./routes/Item')
 const authRoute = require('./routes/auth')
