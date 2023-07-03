@@ -24,7 +24,7 @@ app.use('/auth', authRoute)
 app.use('/order', orderRoute)
 app.use('/review', reviewRoute)
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect('mongodb+srv://admin:admin@ecommerce.1db7afl.mongodb.net/')
 .then(() => {
     app.listen(3000, () => {
         console.log('RUNNING ON 3000')
