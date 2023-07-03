@@ -23,8 +23,10 @@ app.use('/auth', authRoute)
 app.use('/order', orderRoute)
 app.use('/review', reviewRoute)
 
-mongoose.connect(process.env.MONGO_URL)
-.then(() => {
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology:true,
+}).then(() => {
     app.listen(3300, () => {
         console.log('RUNNING ON 3300')
     })
