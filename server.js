@@ -25,8 +25,8 @@ app.use('/review', reviewRoute)
 
 mongoose.connect("mongodb+srv://admin:admin@ecommerce.1db7afl.mongodb.net/")
 .then(() => {
-    app.listen(3300, () => {
-        console.log('RUNNING ON 3300')
+    app.listen(3000, () => {
+        console.log('RUNNING ON 3000')
     })
     console.log('CONNECTED TO DB')
 }).catch((error) => {
